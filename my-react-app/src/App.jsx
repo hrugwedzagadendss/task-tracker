@@ -16,12 +16,16 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      <h1>hello world</h1>
       <h1>Vite + React</h1>
       <h2>Welcome lets solve the merge conflict"edited"</h2>
-      <h1>Task Tracker Main Branch</h1>
+      <h1>Task Tracker [Resolved 🚀]</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
+        </button>
+        <button>
+          Project Running!
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
