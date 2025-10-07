@@ -1,16 +1,54 @@
-# React + Vite
+# My React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **React + Vite** project for a simple Task Tracker application. It's a foundational setup that demonstrates a basic React component, state management, and the use of external libraries.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project contains two main parts: a **classic HTML/CSS/JS application** at the root and a **modern React application** within the `my-react-app` directory.
 
-## React Compiler
+### Root Directory (`/`)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  * **`index.html`**: The main HTML file for a simple, non-React task tracker.
+  * **`style.css`**: The stylesheet for the root `index.html`.
+  * **`script.js`**: A basic JavaScript file that logs a message to the console.
 
-## Expanding the ESLint configuration
+-----
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### React Application (`/my-react-app`)
+
+This is a standard Vite-powered React project.
+
+  * **`src/App.jsx`**: The main React component. It uses the `useState` hook to manage a simple counter and displays Vite and React logos.
+  * **`src/main.jsx`**: The entry point for the React application, which renders the `<App />` component into the `index.html`.
+  * **`index.html`**: The HTML file specifically for the React app. It has a `<div id="root"></div>` where the React components are mounted.
+  * **`package.json`**: Lists the project's dependencies and development dependencies, including `react`, `react-dom`, and `@vitejs/plugin-react`. It also defines scripts for running and building the application.
+  * **`vite.config.js`**: The configuration file for Vite, which is the build tool used to bundle the React application.
+  * **`node_modules/`**: Contains all installed dependencies, including `react`, `react-dom`, and `react-icons`.
+
+-----
+
+## Getting Started
+
+To get this project running locally, follow these steps:
+
+1.  Navigate to the `my-react-app` directory in your terminal.
+    ```sh
+    cd my-react-app
+    ```
+2.  Install the dependencies.
+    ```sh
+    npm install
+    ```
+3.  Start the development server.
+    ```sh
+    npm run dev
+    ```
+
+The application will be available at the local URL provided in the terminal output (e.g., `http://localhost:5173`).
+
+## Key Features
+
+  * **React + Vite**: A modern and fast development environment for building web applications.
+  * **State Management**: Uses React's built-in **`useState` hook** to manage the component's state, as seen in the `App.jsx` counter.
+  * **Linting**: Configured with ESLint to ensure code quality and consistency using `@eslint/js`, `eslint-plugin-react-hooks`, and `eslint-plugin-react-refresh`.
+  * **External Packages**: The project includes `react-icons`, a library that makes it easy to add customizable SVG icons to your React app.
